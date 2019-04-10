@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: two-pod
+  labels:
+    name: two-pod
+spec:
+  
+  containers:
+  - name: mcnt1
+    image: nginx:1.15.10
+    ports:
+        - containerPort: 81
+
+  - name: mcnt2
+    image: bitnami/apache
+    ports:
+        - containerPort: 80

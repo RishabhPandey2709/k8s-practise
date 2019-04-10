@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcd-deployment
+  labels:
+    app: mcd
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mcd
+  template:
+    metadata:
+      labels:
+        app: mcd
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 30
+      
+      - name: apache
+        image: bitnami/apache
+        ports:
+        - containerPort: 80

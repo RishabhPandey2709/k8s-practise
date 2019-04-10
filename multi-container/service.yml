@@ -1,0 +1,22 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: two-pod
+  labels:
+    name: two-pod
+spec:
+  type: NodePort
+  selector:
+    name: two-pod  
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    
+  - name: https
+    protocol: TCP
+    port: 81
+   
+   
+
+

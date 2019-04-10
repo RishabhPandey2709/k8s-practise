@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: multi
+  name: multi
+  namespace: new
+spec:
+  containers:
+  - image: nginx:alpine
+    name: nginx
+    
+  - image: httpd
+    name: apache
+ 

@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mcnt
+  namespace: test
+  labels:
+    name: mcnt
+spec:
+  type: NodePort
+  
+  ports:
+  - name:  TCP
+    port:  80
+    targetPort:  80
